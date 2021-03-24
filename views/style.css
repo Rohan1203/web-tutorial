@@ -1,0 +1,142 @@
+body {
+    background-color: #ffffff;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(SansationLight.ttf);
+}
+
+* {
+    font-family: myFirstFont;
+}
+
+.cf {
+    background: repeating-linear-gradient(to right, red 0%, blue 50%, red 100%);
+    padding: 15px;
+    width: 100%;
+    background-size: 200% auto;
+    background-position: 0 100%;
+    animation: gradient 2s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.title {
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: bold;
+    font-variant: initial;
+}
+
+.container-login {
+    padding: 40px;
+    /* width: 380px;
+        margin-top: 10%; */
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.863);
+    background: #0e0e0f;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    display: block;
+}
+
+.login-btn {
+    width: 90px;
+    height: 35px;
+    border: 1px solid #333;
+    color: black;
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.specifies {
+    position: absolute;
+    bottom: -160px;
+    box-sizing: border-box;
+    transition: 1s;
+    display: flex;
+}
+
+.container-login:hover .specifies {
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+padding .login-btn::before,
+.login-btn::after {
+    position: absolute;
+    background: #eee;
+    border-radius: 15px;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+}
+
+.login-btn::before {
+    height: 40px;
+    width: 90px;
+}
+
+.login-btn::after {
+    width: 90px;
+    height: 40px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.login-btn:hover::before {
+    width: 0px;
+    background: #fff;
+}
+
+.login-btn:hover::after {
+    height: 0px;
+    background: repeating-linear-gradient(to right, red 0%, blue 50%, red 100%);
+}
+
+.login-btn:hover {
+    background: repeating-linear-gradient(to right, red 0%, blue 50%, red 100%);
+    background-size: 200% auto;
+    background-position: 0 100%;
+    animation: gradient 1s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    color: #fff;
+}
+
+label {
+    color: #ffffff;
+}
