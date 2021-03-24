@@ -61,11 +61,13 @@
         position: relative;
         z-index: 0;
         transition: 1s;
+        border-radius: 15px;
 }
 
 .btn::before, .btn::after {
   position: absolute;
   background: #eee;
+  border-radius: 15px;
   z-index: -1;
   transition: 1s;
   content: '';
@@ -97,11 +99,17 @@
 
 .btn:hover::after {
   height: 0px;
-  background: #fff;
+  background: repeating-linear-gradient(to right, red 0%, blue 50%, red 100%);
 }
 
 .btn:hover {
-  background: #fff;
+    background: repeating-linear-gradient(to right, red 0%, blue 50%, red 100%);
+    background-size: 200% auto;
+    background-position: 0 100%;
+    animation: gradient 1s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    color: #fff;
 }
 
     </style>
@@ -119,8 +127,7 @@
                 <input class="form-control" type="password" placeholder="password" id="password" name="password"> <br>
                 <button class="btn">
                     <span class="noselect">Login</span>
-                </button>
-                
+                </button> 
                 <p>Not an user <a href="/signup">Sign Up</a></p>
             </center>
         </form>
