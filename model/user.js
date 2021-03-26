@@ -28,17 +28,3 @@ const userSchema = Schema({
 
 
 module.exports = Article = mongoose.model("Article", articleSchema);
-
-app.get('/signup', (req, res) => {
-    res.render('signup');
-});
-
-//Routing files
-app.use(userRoute);
-
-
-const port = 8000;
-const ip = 'localhost';
-app.listen(port, ip, () => {
-    console.log('Server stared at port :', port);
-});
